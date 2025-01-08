@@ -5,12 +5,6 @@ let inputEl = document.getElementById("input-el");
 let inputBtn = document.getElementById("input-btn");
 let ulEl = document.getElementById("ul-el");
 
-inputBtn.addEventListener("click", function () {
-  myLeads.push(inputEl.value);
-  inputEl.value = "";
-  renderLeads();
-});
-
 function renderLeads() {
   let listItems = "";
   for (let i = 0; i < myLeads.length; i++) {
@@ -20,3 +14,11 @@ function renderLeads() {
   }
   ulEl.innerHTML = listItems;
 }
+
+inputBtn.addEventListener("click", function () {
+  myLeads.push(inputEl.value);
+  inputEl.value = "";
+  renderLeads();
+});
+
+
